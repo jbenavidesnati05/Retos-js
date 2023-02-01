@@ -7,7 +7,7 @@ let countRed =0;
  
 
     
-
+const cant =[]
 
 for (let i = 0; i < colors.length; i++) {
     if(colors[i] =="azul"){
@@ -22,8 +22,18 @@ for (let i = 0; i < colors.length; i++) {
     else{
         console.log(" no hay colores");
     }
+
 }
+cant.push(countBlue);
+cant.push(countYellow);
+cant.push(countRed);
+
+cantordenado = cant.sort((a,b)=>{
+    return a-b
+})
+
 console.log("longiud del arreglo"+colors.length);
 console.log("azul     => " +countBlue);
 console.log("amarillo => " +countYellow);
 console.log("rojo     => " +countRed);
+console.log(cant);
